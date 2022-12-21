@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <body>
+        <section class="bg-animation">
+          <div class="top"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="bottom"></div>
+        </section>
+        <div class="container">
+          <form class="glass login">
+            <div class="ball"><ion-icon name="log-in-outline"></ion-icon></div>
+            <div class="log__email log__box">
+              <input
+                type="email"
+                pattern="[a-zA-z0-9-+._]+@[a-zA-z0-9-+._]+\.[a-z]{2,}"
+                class="login__email input-style"
+                placeholder="E-mail"
+                id="Email Address"
+                required/>
+              <ion-icon class="i" name="mail-outline"></ion-icon>
+            </div>
+            <div class="log__pass log__box">
+              <input
+                type="password"
+                class="login__pass input-style"
+                placeholder="Senha"
+                required
+                id="passwords"
+                value=""/>
+              <ion-icon class="i" name="lock-closed-outline"></ion-icon>
+            </div>
+            <div class="log__remember log__box">
+              <input
+                type="checkbox"
+                class="log__remember--input"
+                id="log--remember"/>
+              <label for="log--remember">Lembre-me</label>
+            </div>
+            <button class="login-btn" type="submit">Logar</button>
+            <div class="form__text">
+              <p>Não tem Conta?</p>
+              <a class="form__sign--up" href="#">Criar</a>
+            </div>
+          </form>
+        </div>
+       <script src="main.js" ></script>
+       <script
+          type="module"
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

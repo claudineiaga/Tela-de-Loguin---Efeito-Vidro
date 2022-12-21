@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  --main-color: rgb(222, 17, 20);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(80deg,
+   #388d27, #e0d3ef);
+  font-family: "Poppins", sans-serif;
+}
+.top {
+  position: absolute;
+  max-height: 80rem;
+  max-width: 80rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, 
+  #e0d3ef, var(--main-color));
+  filter: blur(40px);
+  animation: bottom 30s infinite;
+}
+@keyframes bottom {
+  0%,
+  100% {
+    top: -10rem;
+  }
+  80% {
+    top: 50rem;
+  }
+}
+.bottom {
+  position: absolute;
+  max-height: 50rem;
+  max-width: 50rem;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, 
+  var(--main-color), #ebe9ee);
+  filter: blur(2rem);
+  animation: top 30s infinite;
+}
+@keyframes top {
+  0%,
+  100% {
+    bottom: -10rem;
+  }
+  80% {
+    bottom: 50rem;
+  }
+}
+.left {
+  position: absolute;
+  max-height: 50rem;
+  max-width: 50rem;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg,
+  #ebe9ee, #a42322);
+  filter: blur(6rem);
+  animation: left 30s infinite;
+}
+@keyframes left {
+  0%,
+  100% {
+    left: -10rem;
+  }
+  80% {
+    left: 80rem;
+  }
+}
+
+.right {
+  position: absolute;
+  max-height: 50rem;
+  max-width: 50rem;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  border-radius: 50%;
+  background: linear-gradient(80deg, #ea1111,
+   #358d27);
+  filter: blur(30px);
+  animation: right 30s infinite;
+}
+@keyframes right {
+  0%,
+  100% {
+    right: -10rem;
+  }
+  80% {
+    right: 80rem;
+  }
+}
+.bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.container {
+  height: 60vh;
+  width: clamp(35rem, 32rem, 25%);
+  height: clamp(50rem, 70vh, 55rem);
+  position: absolute;
+  z-index: 2;
+}
+.glass {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.1)
+  );
+  z-index: 3;
+  backdrop-filter: blur(1rem);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-shadow: 0 1.5rem 0 rgba(255, 255, 255, 0.61),
+    inset 0 -1.5rem rgba(238, 238, 238, 0.692),
+     0 4.5rem 0 rgba(0, 0, 0, 0.05);
+}
+.icon {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: black;
+  top: -1rem;
+}
+.icon2 {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: black;
+}
+
+/* ************************************************************************* */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2.2rem;
+}
+
+.log__box {
+  position: relative;
+  height: 5rem;
+  width: 80%;
+}
+.input-style {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 0 3rem;
+  font-size: 1.2rem;
+  color: #777;
+  border-bottom: 4px solid #ccc;
+  transition: all 0.3s;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 1rem;
+}
+form .i {
+  font-size: 2.2rem;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: var(--main-color);
+}
+.log__box input:is(:focus, :valid) {
+  border-bottom-color: var(--main-color);
+  font-size: 1.6rem;
+  color: var(--main-color);
+}
+
+.log__box input:is(:focus, :valid) ~ .i {
+  color: var(--main-color);
+}
+.log__remember label {
+  font-size: 1.6rem;
+  color: #777;
+}
+.log__remember {
+  margin-top: -1rem;
+  height: fit-content;
+}
+form button {
+  width: 70%;
+  height: 5rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  background-color: rgba(216, 8, 11, 0.895);
+  color: #e0d3ef;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+  transition: all 0.3s;
+}
+.form__text {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.form__text a {
+  text-decoration: none;
+  color: var(--blue);
+}
+input {
+  border: none;
+  outline: none;
+}
+
+button:active {
+  background: linear-gradient(
+    to right bottom,
+    var(--main-color),
+    rgba(9, 84, 3, 0.8)
+  );
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+button:hover{
+    background-color: #6a1010;
+}
+input {
+  font-family: "Poppins", sans-serif;
+}
+input[type="checkbox"] {
+  accent-color: var(--main-color);
+}
+input[type="checkbox"]:checked {
+  outline: 3px solid var(--main-color);
+  outline-offset: 1px;
+}
+.ball {
+  position: absolute;
+  color: var(--main-color);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.1)
+  );
+  width: 10rem;
+  height: 8rem;
+  top: 0;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  box-shadow: 0 0.5rem 0 rgba(255, 255, 255, 0.61),
+    inset 0 -0.5rem rgba(238, 238, 238, 0.692), 0 1.5rem 0 rgba(0, 0, 0, 0.05);
+}
+.ball ion-icon {
+  font-size: 5rem;
+  position: absolute;
+  top: 15%;
+  left: 20%;
+}
+
+.form__text {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 0.5rem;
+  color: #eee;
+  font-weight: 500;
+}
+.form__text a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
